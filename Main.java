@@ -1,13 +1,18 @@
 public class Main {
-    public static void main(String[] args) {
-        HuffmanInterface huffmanCoding = new HuffmanCoding();
+    public static void main(String[] args) 
+    {
+        HuffmanCoding huffmanCoding = new HuffmanCoding();
 
-        String message = "Your Name Goes Here";
+        String message = "Frankie <3";
 
         String encoded = huffmanCoding.encode(message);
+        String key = encoder.getKey();
         System.out.println(encoded);
+        System.out.println(key);
 
-        String decoded = huffmanCoding.decode(encoded);
+
+        HuffmanInterface decoder = new HuffmanCoding(key);
+        String decoded = decoder.decode(encoded);
         System.out.println(decoded);
     }
 }
